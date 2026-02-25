@@ -1,0 +1,222 @@
+{
+  "settings": {
+    "max_concurrent": 50,
+    "timeout": 10,
+    "retry_attempts": 3,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "output_directory": "results",
+    "log_level": "INFO"
+  },
+  "platforms": {
+    "social_media": {
+      "enabled": true,
+      "sites": {
+        "twitter": {
+          "url": "https://twitter.com/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "facebook": {
+          "url": "https://facebook.com/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "instagram": {
+          "url": "https://instagram.com/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "linkedin": {
+          "url": "https://linkedin.com/in/{}",
+          "method": "get",
+          "confidence_threshold": 65
+        },
+        "github": {
+          "url": "https://github.com/{}",
+          "method": "get",
+          "confidence_threshold": 80
+        },
+        "reddit": {
+          "url": "https://reddit.com/user/{}",
+          "method": "get",
+          "confidence_threshold": 75
+        },
+        "tiktok": {
+          "url": "https://tiktok.com/@{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "youtube": {
+          "url": "https://youtube.com/@{}",
+          "method": "get",
+          "confidence_threshold": 75
+        },
+        "pinterest": {
+          "url": "https://pinterest.com/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "snapchat": {
+          "url": "https://snapchat.com/add/{}",
+          "method": "get",
+          "confidence_threshold": 65
+        },
+        "discord": {
+          "url": "https://discord.com/users/{}",
+          "method": "get",
+          "confidence_threshold": 60
+        },
+        "twitch": {
+          "url": "https://twitch.tv/{}",
+          "method": "get",
+          "confidence_threshold": 75
+        },
+        "medium": {
+          "url": "https://medium.com/@{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "wordpress": {
+          "url": "{}.wordpress.com",
+          "method": "get",
+          "confidence_threshold": 65
+        },
+        "blogger": {
+          "url": "{}.blogspot.com",
+          "method": "get",
+          "confidence_threshold": 65
+        }
+      }
+    },
+    "forums": {
+      "enabled": true,
+      "sites": {
+        "stackoverflow": {
+          "url": "https://stackoverflow.com/users/{}",
+          "method": "get",
+          "confidence_threshold": 75
+        },
+        "quora": {
+          "url": "https://quora.com/profile/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "dev_to": {
+          "url": "https://dev.to/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "hashnode": {
+          "url": "https://hashnode.com/@{}",
+          "method": "get",
+          "confidence_threshold": 65
+        }
+      }
+    },
+    "professional": {
+      "enabled": true,
+      "sites": {
+        "linkedin": {
+          "url": "https://linkedin.com/in/{}",
+          "method": "get",
+          "confidence_threshold": 65
+        },
+        "github": {
+          "url": "https://github.com/{}",
+          "method": "get",
+          "confidence_threshold": 80
+        },
+        "gitlab": {
+          "url": "https://gitlab.com/{}",
+          "method": "get",
+          "confidence_threshold": 75
+        },
+        "bitbucket": {
+          "url": "https://bitbucket.org/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "behance": {
+          "url": "https://behance.net/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        },
+        "dribbble": {
+          "url": "https://dribbble.com/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        }
+      }
+    },
+    "gaming": {
+      "enabled": true,
+      "sites": {
+        "steam": {
+          "url": "https://steamcommunity.com/id/{}",
+          "method": "get",
+          "confidence_threshold": 75
+        },
+        "epicgames": {
+          "url": "https://fortnitetracker.com/profile/all/{}",
+          "method": "get",
+          "confidence_threshold": 65
+        },
+        "xbox": {
+          "url": "https://xboxgamertag.com/search/{}",
+          "method": "get",
+          "confidence_threshold": 60
+        },
+        "playstation": {
+          "url": "https://psnprofiles.com/{}",
+          "method": "get",
+          "confidence_threshold": 70
+        }
+      }
+    }
+  },
+  "confidence_scoring": {
+    "http_status_weight": 0.30,
+    "content_analysis_weight": 0.25,
+    "response_time_weight": 0.15,
+    "url_structure_weight": 0.15,
+    "title_analysis_weight": 0.15,
+    "thresholds": {
+      "found": 70,
+      "maybe": 40,
+      "not_found": 0
+    }
+  },
+  "username_variations": {
+    "enabled": true,
+    "max_variations": 50,
+    "prefixes": [
+      "the", "real", "official", "iam", "im", "its", 
+      "mr", "mrs", "ms", "dr", "prof"
+    ],
+    "suffixes": [
+      "official", "real", "verified", "pro", "dev", 
+      "admin", "mod", "123", "2024", "2025"
+    ],
+    "separators": ["_", ".", "-"],
+    "number_range": [1, 99]
+  },
+  "email_analysis": {
+    "enabled": true,
+    "check_mx_records": true,
+    "check_breaches": true,
+    "breach_api": "haveibeenpwned"
+  },
+  "phone_analysis": {
+    "enabled": true,
+    "validate_format": true,
+    "detect_country": true,
+    "detect_type": true
+  },
+  "domain_analysis": {
+    "enabled": true,
+    "dns_records": ["A", "AAAA", "MX", "NS", "TXT", "SOA"],
+    "whois_lookup": true,
+    "ssl_check": true,
+    "ip_resolution": true
+  }
+}
