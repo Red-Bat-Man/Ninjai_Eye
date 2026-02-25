@@ -65,7 +65,7 @@ git clone https://github.com/Red-Bat-Man/ninjai_eye.git
 cd ninjai_eye
 
 # Install dependencies
-pip install -r requirements.txt
+pip install requirements.txt
 
 # Make the script executable (Linux/Mac)
 chmod +x ninjai_eye.py
