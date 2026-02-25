@@ -61,7 +61,7 @@ NinjaEye is a comprehensive Open Source Intelligence (OSINT) framework designed 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ninjai_eye.git
+git clone https://github.com/Red-Bat-Man/ninjai_eye.git
 cd ninjai_eye
 
 # Install dependencies
@@ -336,7 +336,7 @@ Contributions are welcome! Please follow these guidelines:
 **Issue**: Import errors for dependencies
 ```bash
 # Solution: Reinstall dependencies
-pip install --upgrade -r requirements.txt
+pip install --upgrade requirements.txt
 ```
 
 **Issue**: DNS resolution failures
